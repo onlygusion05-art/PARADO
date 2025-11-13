@@ -2,76 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Me</title>
+  <title>Contact Us</title>
   <link rel="stylesheet" href="contact.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Itim&family=Italiana&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <header class="top-box">
-    <div class="logo">
-      <span class="logo-left">MY</span> 
-      <span class="logo-right">PORTFOLIO</span>
-    </div>
 
-    <nav class="nav-bar" id="navBar">
-      <ul>
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="about.html">ABOUT</a></li>
-        <li><a href="contact.html" class="active">CONTACT US</a></li>
-      </ul>
-    </nav>
+  <header class="header-grid">
+    <div class="container">
+      <div class="menu-bar">
+        <div class="menu-left">
+          <button class="hamburger" id="hamburger">&#9776;</button>
+          <h1 style="color: rgb(10, 10, 10);">MY PORTFOLIO</h1>
+        </div>
 
-    <div class="hamburger" id="hamburger">
-      <div></div>
-      <div></div>
-      <div></div>
+        <nav id="nav-menu">
+          <a href="index.html">HOME</a>
+          <a href="about.html">ABOUT</a>
+          <a href="contact.html" id="active-btn">CONTACT US</a>
+        </nav>
+      </div>
     </div>
   </header>
 
-  <div class="contact-container">
-    <h1>CONTACT ME</h1>
-    <p>If you’d like to get in touch, feel free to contact me through any of the following:</p>
+  <main class="main-grid">
+    <div class="profile-image">
+      <img src="amparado.jpg" alt="Luzangel A. Amparado">
+    </div>
 
-    <ul>
-      <li>
-        <i class="fa-solid fa-envelope"></i>
-        <a href="mailto:mariannegaybamantillo@gmail.com">Email: mariannegaybamantillo@gmail.com</a>
-      </li>
-
-      <li>
-        <i class="fa-solid fa-phone"></i>
-        <a href="tel:+639676935418">Phone: +63 967 693 5418</a>
-      </li>
-
-      <li>
-        <i class="fa-brands fa-facebook"></i>
-        <a href="https://www.facebook.com/share/1AEPv8K3uD/" target="_blank">Facebook: Marianne Amantillo</a>
-      </li>
-
-      <li>
-        <i class="fa-brands fa-instagram"></i>
-        <a href="https://www.instagram.com/nnyyllablelablelable?igsh=MXFuMW9scHphemhyOA==" target="_blank">Instagram: @marianneamantillo</a>
-      </li>
-
-      <li>
-        <i class="fa-brands fa-x-twitter"></i>
-        <a href="https://x.com/NNnyra?t=OHb11qgvBP5eZUzpt0LDqA&s=09" target="_blank">X (Twitter): @NNnyra</a>
-      </li>
-
-      <li>
-        <i class="fa-brands fa-github"></i>
-        <a href="https://github.com/nnyyyyy29" target="_blank">GitHub: nnyyyyy29</a>
-      </li>
-    </ul>
-  </div>
+    <div class="text-box">
+      <h2 style="color: white;">Contact Me</h2>
+      <p style="color: white;">If you want to reach out, feel free to message me anytime!</p>
+      <p>
+        <i class="fa-solid fa-envelope" style="color: white;"></i>
+        Email: <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blank" style="color: white;">amparadoluzangel@gmail.com</a>
+      <p>
+        <i class="fa-brands fa-facebook" style="color: white;"></i>
+        Facebook: <a href="https://www.facebook.com/lzneaprd" target="_blank" style="color: white;">Luzangel A. Amparado</a>
+      </p>
+      <p>
+        <i class="fa-brands fa-github" style="color: white;"></i>
+        GitHub: <a href="https://github.com/amparado08" target="_blank" style="color: white;">Miss_L.A</a>
+      </p>
+      <p>
+        <i class="fa-solid fa-phone" style="color: white;"></i>
+        Contact #: +63 912 345 6789
+      </p>
+    </div>
+  </main>
 
   <script>
     const hamburger = document.getElementById('hamburger');
-    const navBar = document.getElementById('navBar');
+    const navMenu = document.getElementById('nav-menu');
     hamburger.addEventListener('click', () => {
-      navBar.classList.toggle('active');
+      navMenu.classList.toggle('active');
     });
   </script>
+
 </body>
 </html>
