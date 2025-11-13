@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me - My Portfolio</title>
+  <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+  
+  <header class="top-box">
+    <div class="logo">
+      <span class="logo-left">MY</span>
+      <span class="logo-right">PORTFOLIO</span>
+    </div>
+
+    <nav class="nav-bar" id="navBar">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html" class="active">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+      </ul>
+    </nav>
+
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+
+  
+  <section class="row">
+    <div class="column image-box">
+      <img src="mypicture.jpg" alt="Profile Picture">
+    </div>
+
+    <div class="column text-box">
+      <h2>About Me</h2>
+      <h1>Marianne Amantillo</h1>
+      <p>
+        Hello! I’m <strong>Marianne Amantillo</strong>, a BS Information Technology student passionate about blending creativity and technology. 
+        I enjoy designing websites that are both visually appealing and functional. 
+        My goal is to use innovation and clean code to create digital experiences that connect and inspire.
+      </p>
+    </div>
+  </section>
+
+  
+  <section class="row">
+    <div class="column skills-box">
+      <h2>My Skills</h2>
+      <ul>
+        <li>HTML, CSS, C++</li>
+        <li>PHP & MySQL</li>
+        <li>System Desining</li>
+        <li>Web Design</li>
+      </ul>
+    </div>
+
+    <div class="column projects-box">
+      <h2>Projects</h2>
+      <ul>
+         <li>Passport Application System</li>
+          <li>Cashiering System</li>
+          <li>Payroll System</li>
+          <li>Water Billing System</li>
+      </ul>
+    </div>
+  </section>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navBar = document.getElementById('navBar');
+    hamburger.addEventListener('click', () => {
+      navBar.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>

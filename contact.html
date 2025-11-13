@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header class="top-box">
+    <div class="logo">
+      <span class="logo-left">MY</span> 
+      <span class="logo-right">PORTFOLIO</span>
+    </div>
+
+    <nav class="nav-bar" id="navBar">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html" class="active">CONTACT US</a></li>
+      </ul>
+    </nav>
+
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+
+  <div class="contact-container">
+    <h1>CONTACT ME</h1>
+    <p>If you’d like to get in touch, feel free to contact me through any of the following:</p>
+
+    <ul>
+      <li>
+        <i class="fa-solid fa-envelope"></i>
+        <a href="mailto:mariannegaybamantillo@gmail.com">Email: mariannegaybamantillo@gmail.com</a>
+      </li>
+
+      <li>
+        <i class="fa-solid fa-phone"></i>
+        <a href="tel:+639676935418">Phone: +63 967 693 5418</a>
+      </li>
+
+      <li>
+        <i class="fa-brands fa-facebook"></i>
+        <a href="https://www.facebook.com/share/1AEPv8K3uD/" target="_blank">Facebook: Marianne Amantillo</a>
+      </li>
+
+      <li>
+        <i class="fa-brands fa-instagram"></i>
+        <a href="https://www.instagram.com/nnyyllablelablelable?igsh=MXFuMW9scHphemhyOA==" target="_blank">Instagram: @marianneamantillo</a>
+      </li>
+
+      <li>
+        <i class="fa-brands fa-x-twitter"></i>
+        <a href="https://x.com/NNnyra?t=OHb11qgvBP5eZUzpt0LDqA&s=09" target="_blank">X (Twitter): @NNnyra</a>
+      </li>
+
+      <li>
+        <i class="fa-brands fa-github"></i>
+        <a href="https://github.com/nnyyyyy29" target="_blank">GitHub: nnyyyyy29</a>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navBar = document.getElementById('navBar');
+    hamburger.addEventListener('click', () => {
+      navBar.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

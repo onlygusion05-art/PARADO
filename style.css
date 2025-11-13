@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Oswald:wght@500&family=Poppins:wght@700&family=Playfair+Display:wght@400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+  background: url("background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #9fcffc;
+  min-height: 100vh;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 10px;
+  height: 100vh;
+  padding: 20px;
+}
+
+.top-box {
+  grid-column: 1 / 3;
+  border: 4px solid #4cc9f0;
+  padding: 20px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.45);
+  position: relative;
+}
+
+.top-box .logo-left {
+  font-family: 'Poppins', sans-serif;
+  color: #ff5ca8;
+}
+
+.top-box .logo-right {
+  font-family: 'Orbitron', sans-serif;
+  color: #4cc9f0;
+  margin-left: 5px;
+}
+
+.navbashortcut {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: #4cc9f0;
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.navbashortcut:hover {
+  transform: scale(1.1);
+}
+
+.left-box {
+  border: 4px solid #4cc9f0;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: rgba(0, 0, 0, 0.45);
+  flex-wrap: wrap;
+}
+
+.left-box img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 3px solid #4cc9f0;
+  box-shadow: 0 4px 12px  rgb(76, 201, 240);
+  object-fit: cover;
+}
+
+.left-box .text-section {
+  text-transform: uppercase;
+}
+
+.left-box .text-section h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #90f4ff;
+}
+
+.left-box .text-section h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+  color: #4cc9f0;
+}
+
+.left-box .text-section p {
+  font-size: 18px;
+  color: #8ea3ff;
+}
+
+.right-box {
+  border: 4px solid #4cc9f0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.right-box ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.right-box ul li a {
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  color: #4cc9f0;
+  padding: 10px 15px;
+  border: 4px solid #4cc9f0;
+  border-radius: 5px;
+  display: block;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.right-box ul li a:hover {
+  background: #4cc9f0;
+  color: black;
+}
+
+@media (max-width: 992px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .top-box {
+    font-size: 28px;
+  }
+
+  .left-box {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+
+  .left-box img {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbashortcut {
+    display: block;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+    padding: 0;
+    gap: 10px;
+  }
+
+  .top-box {
+    font-size: 24px;
+    padding: 15px;
+  }
+
+  .left-box,
+  .right-box {
+    width: 100%;
+    border: 3px solid #4cc9f0;
+    padding: 30px;
+  }
+
+  .left-box img {
+    width: 320px;
+    height: 320px;
+  }
+
+  .right-box {
+    display: none;
+  }
+
+  .right-box.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.85);
+    border: 4px solid #4cc9f0;
+    border-radius: 12px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    position: fixed;
+    top: 120px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    animation: dropdown 0.4s ease forwards;
+  }
+
+  .right-box ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .right-box ul li a {
+    width: 150px;
+    border: 2px solid #4cc9f0;
+    color: white;
+    background: transparent;
+  }
+
+  .right-box ul li a:hover {
+    background: #4cc9f0;
+    color: black;
+  }
+
+  @keyframes dropdown {
+    from {opacity: 0; transform: translateY(-10px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+}
