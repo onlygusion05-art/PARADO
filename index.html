@@ -2,41 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="grid-container">
-    <div class="top-box">
-      <span class="logo-left">MY</span> 
-      <span class="logo-right">PORTFOLIO</span>
-      <button class="navbashortcut" id="navbashortcut">&#9776;</button>
-    </div>
 
-    <div class="left-box">
-      <img src="mypicture.jpg" alt="Profile Picture">
-      <div class="text-section">
-        <h2>HI, IT'S ME</h2>
-        <h1>MARIANNE AMANTILLO</h1>
-        <p>BS INFORMATION TECHNOLOGY STUDENT</p>
+  <header class="header-grid">
+    <div class="container">
+      <div class="menu-bar">
+        <div class="menu-left">
+          <button class="hamburger" id="hamburger">&#9776;</button>
+          <h1>MY PORTFOLIO</h1>
+        </div>
+
+        <nav id="nav-menu">
+          <a href="index.html" id="active-btn">HOME</a>
+          <a href="about.html">ABOUT</a>
+          <a href="contact.html">CONTACT US</a>
+        </nav>
       </div>
     </div>
-<div class="right-box" id="navbar">
-  <ul>
-    <li><a href="index.html">HOME</a></li>
-    <li><a href="about.html">ABOUT</a></li>
-    <li><a href="contact.html">CONTACT US</a></li>
-  </ul>
-</div>
+  </header>
 
- <script>
-  const navbashortcut = document.querySelector('.navbashortcut');
-  const menu = document.querySelector('.right-box');
+  <main class="main-grid">
+    <div class="profile-image">
+      <img src="amparado.jpg" alt="Luzangel A. Amparado">
+    </div>
+    <div class="text-box">
+      <p>Hello It’s me</p>
+      <h2>Luzangel A. Amparado</h2>
+      <p>And I am Information Technology</p>
+    </div>
+  </main>
 
-  navbashortcut.addEventListener('click', () => {
-    menu.classList.toggle('show');
-  });
-</script>
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
+
 </body>
 </html>
